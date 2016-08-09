@@ -1,18 +1,8 @@
 ---
 ---
-%both-containers {
-  margin-bottom: 3rem;
-}
-
 #firepad-container {
-  @extend %both-containers;
   width: 100%;
-  height: 80vh;
   min-height: 500px;
-}
-#email-preview-container {
-  @extend %both-containers;
-  margin-top: 10px;
 }
 div.email-meta {
   h1,h2,h3,h4,h5,h6 {
@@ -40,7 +30,7 @@ div.email-content {
 .scroll-container {
   display: flex;
   overflow: hidden;
-  height: calc(100vh - 110px);
+  height: calc(100vh - 112px);
   position: relative;
   width: 100%;
   backface-visibility: hidden;

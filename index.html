@@ -6,12 +6,18 @@ top_message: 'Type markdown on the left, and watch your email come to life on th
   hints on how to use markdown</a>.'
 ---
 
+<script>
+aceOptions = {
+  maxLines: Infinity,
+  showGutter: false,
+  displayIndentGuides: false,
+  theme: "ace/theme/{{ site.ace_theme }}"
+};
+</script>
 
 <div class="row scroll-container">
   <div class="left-half col-md-6">
-    <div id="firepad-container">
-      {% include email-start.html %}
-    </div>
+    <div id="firepad-container">{% include email-start.html %}</div>
   </div>
   <div class="right-half col-md-6">
     <div id="email-preview-container">

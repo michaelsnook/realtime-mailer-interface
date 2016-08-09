@@ -28,7 +28,8 @@ function init() {
   // var firepadRef = new Firebase('<YOUR FIREBASE URL>');
   //// Create ACE
   window.editor = ace.edit("firepad-container");
-  editor.setTheme("ace/theme/textmate");
+  editor.setOptions(aceOptions);
+
   var session = editor.getSession();
   session.setUseWrapMode(true);
   session.setUseWorker(false);
@@ -83,7 +84,7 @@ function sendNewContent() {
 
 /*
  * Get ready! stash a few vars that don't need to be recalculated each time,
- * set the keyup, and focus on the editor.
+ * set the change event handler, and focus on the editor.
  */
 $(document).ready(function() {
   init(); // originally this was window.onload -- not sure why
@@ -91,6 +92,6 @@ $(document).ready(function() {
   template = Handlebars.compile(source);
   $target = $('#email-preview-target');
 
-  $('#firepad-container').on('keyup', sendNewContent );
+  editor.on('change', sendNewContent );
   editor.focus();
 });
