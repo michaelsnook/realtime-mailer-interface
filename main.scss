@@ -1,0 +1,25 @@
+---
+---
+%both-containers {
+  margin-bottom: 3rem;
+}
+
+#firepad-container {
+  @extend %both-containers;
+  width: 100%;
+  height: 80vh;
+  min-height: 500px;
+}
+#email-preview-container {
+  @extend %both-containers;
+  margin-top: 10px;
+}
+div.email-meta {
+  h1,h2,h3,h4,h5,h6 {
+    margin: 0.5rem;
+    font-weight: 300;
+  }
+}
+div.email-content {
+  a { text-decoration: underline; }
+}
