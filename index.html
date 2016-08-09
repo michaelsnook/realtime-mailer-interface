@@ -1,22 +1,19 @@
 ---
 layout: base
+top_message: 'Type markdown on the left, and watch your email come to life on the
+  right! Send the URL to a friend to edit together in real-time. Check here
+  for <a href="https://help.github.com/articles/basic-writing-and-formatting-syntax/">
+  hints on how to use markdown</a>.'
 ---
-<div class="row border-bottom">
-  <div class="col-md-12">
-    <p>Type markdown on the left, and watch your email come to life on the
-      right! Send the URL to a friend to edit together in real-time. Check here
-      for <a href="https://help.github.com/articles/basic-writing-and-formatting-syntax/">
-      hints on how to use markdown</a>.</p>
-  </div>
-</div>
 
-<div class="row">
-  <div class="col-md-6">
+
+<div class="row scroll-container">
+  <div class="left-half col-md-6">
     <div id="firepad-container">
       {% include email-start.html %}
     </div>
   </div>
-  <div class="col-md-6">
+  <div class="right-half col-md-6">
     <div id="email-preview-container">
       <div id="email-preview-target"></div>
     </div>
